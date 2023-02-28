@@ -89,7 +89,7 @@ class HeaderSection extends StatelessWidget {
         right: screenWidth.width / 1.6,
         child: Row(
           children: [
-            SizedBox(
+            const SizedBox(
               width: 100,
             ),
             Column(

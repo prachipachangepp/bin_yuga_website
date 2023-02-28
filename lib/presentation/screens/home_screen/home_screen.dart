@@ -29,11 +29,11 @@ Widget webBody() {
     return SingleChildScrollView(
       child: Column(children: [
         HeaderSection(screenWidth: screenWidth),
-        AboutUsSection(),
+        const AboutUsSection(),
 
         ///todo for Prachi
 
-        OurServicesSection(),
+        const OurServicesSection(),
 
         ///todo for Vishal
 
