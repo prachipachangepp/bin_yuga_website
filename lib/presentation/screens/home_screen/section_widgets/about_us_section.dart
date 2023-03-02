@@ -10,30 +10,43 @@ class AboutUsSection extends StatelessWidget {
     return Stack(children: [
       Row(mainAxisAlignment: MainAxisAlignment.center, children: [
         Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-          Text(
-            "About Us",
-            textAlign: TextAlign.center,
-            style: GoogleFonts.fredoka(
-              fontSize: MediaQuery.of(context).size.width / 60,
-              fontWeight: FontWeight.w500,
-              color: WebSiteColors().appBlack,
+          Container(
+            padding: const EdgeInsets.only(
+              bottom: 5, // Space between underline and text
+            ),
+            decoration: const BoxDecoration(
+              border: Border(
+                  bottom: BorderSide(
+                      color: Colors.black, width: 2.2, style: BorderStyle.solid
+                      // Underline thickness
+                      )),
+            ),
+            child: Text(
+              "About Us",
+              textAlign: TextAlign.center,
+              style: GoogleFonts.fredoka(
+                fontSize: MediaQuery.of(context).size.width / 60,
+                fontWeight: FontWeight.w500,
+                color: WebSiteColors().appBlack,
+                // decoration: TextDecoration.underline,
+              ),
             ),
           ),
-          Divider(
-            color: WebSiteColors().appBlack,
-            height: 5,
-            thickness: 3,
-            indent: 25,
-          ),
-          Text(
-            "Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit Praesent vitae ultricies justo. Praesent cursus a odio nec facilisis."
-            "\nDonec nisi lacus, tristique vel nunc ut,pretium egestas neque. "
-            "\nMauris quis eleifend magna. Sed ut dui ipsum. Sed posuere, ",
-            textAlign: TextAlign.center,
-            style: GoogleFonts.fredoka(
-              fontSize: MediaQuery.of(context).size.width / 75,
-              fontWeight: FontWeight.w500,
-              color: WebSiteColors().smalltextcolor,
+          // Container
+          Padding(
+            padding: EdgeInsets.only(
+              top: MediaQuery.of(context).size.width / 40,
+            ),
+            child: Text(
+              "Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit Praesent vitae ultricies justo. Praesent cursus a odio nec facilisis."
+              "\nDonec nisi lacus, tristique vel nunc ut,pretium egestas neque. "
+              "\nMauris quis eleifend magna. Sed ut dui ipsum. Sed posuere, ",
+              textAlign: TextAlign.center,
+              style: GoogleFonts.fredoka(
+                fontSize: MediaQuery.of(context).size.width / 75,
+                fontWeight: FontWeight.w500,
+                color: WebSiteColors().smalltextcolor,
+              ),
             ),
           ),
           // SizedBox(
@@ -47,8 +60,8 @@ class AboutUsSection extends StatelessWidget {
             child: Row(
               children: [
                 Container(
-                  height: MediaQuery.of(context).copyWith().size.height / 2.9,
-                  width: MediaQuery.of(context).copyWith().size.width / 4,
+                  height: MediaQuery.of(context).copyWith().size.height / 3,
+                  width: MediaQuery.of(context).copyWith().size.width / 4.5,
                   decoration: const BoxDecoration(
                       gradient: LinearGradient(
                         begin: Alignment.topLeft,
@@ -80,8 +93,8 @@ class AboutUsSection extends StatelessWidget {
                   width: MediaQuery.of(context).size.width / 80,
                 ),
                 Container(
-                  height: MediaQuery.of(context).copyWith().size.height / 2.9,
-                  width: MediaQuery.of(context).copyWith().size.width / 4,
+                  height: MediaQuery.of(context).copyWith().size.height / 3,
+                  width: MediaQuery.of(context).copyWith().size.width / 4.5,
                   decoration: const BoxDecoration(
                       gradient: LinearGradient(
                         begin: Alignment.topLeft,
@@ -115,8 +128,9 @@ class AboutUsSection extends StatelessWidget {
                 Container(
                   // height: MediaQuery.of(context).size.height / 120,
                   // width: MediaQuery.of(context).size.width / 120,
-                  height: MediaQuery.of(context).copyWith().size.height / 2.9,
-                  width: MediaQuery.of(context).copyWith().size.width / 4,
+                  height: MediaQuery.of(context).copyWith().size.height / 3,
+                  width: MediaQuery.of(context).copyWith().size.width / 4.5,
+
                   decoration: const BoxDecoration(
                       gradient: LinearGradient(
                         begin: Alignment.topLeft,
